@@ -1,0 +1,3434 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Love You Forever ❤️ · A Timeless Romantic Experience</title>
+  <meta name="description" content="A nostalgic, cinematic romantic digital experience celebrating eternal love with dynamic poetry, interactive constellations, love letters, and music." />
+  <meta property="og:title" content="I Love You Forever ❤️ · A Timeless Romantic Experience" />
+  <meta property="og:description" content="A nostalgic, cinematic romantic digital experience celebrating eternal love with dynamic poetry, interactive constellations, love letters, and music." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Cormorant Garamond, Alex Brush, Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* -------------------------------------------------------------
+       1. ROOT DESIGN SYSTEM & VARIABLES
+       ------------------------------------------------------------- */
+    :root {
+      --bg-dark: #08070d;
+      --bg-wine: #1c0816;
+      --bg-surface: rgba(22, 13, 28, 0.65);
+      --bg-glass: rgba(32, 17, 40, 0.55);
+      --border-glass: rgba(255, 205, 225, 0.16);
+      --border-glass-hover: rgba(255, 215, 180, 0.35);
+
+      --color-rose: #ff4d6d;
+      --color-rose-soft: #f472b6;
+      --color-blush: #fda4af;
+      --color-gold: #f59e0b;
+      --color-gold-light: #fde68a;
+      --color-champagne: #fae8d2;
+      --color-text-main: #fdf2f8;
+      --color-text-muted: #d8b4c8;
+      --color-text-dim: #9d7b93;
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-display: 'Cinzel', serif;
+      --font-script: 'Alex Brush', cursive;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+      --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow-glow-rose: 0 0 45px rgba(255, 77, 109, 0.35);
+      --shadow-glow-gold: 0 0 35px rgba(245, 158, 11, 0.3);
+    }
+
+    /* -------------------------------------------------------------
+       2. RESET & BASE SETUP
+       ------------------------------------------------------------- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      background-color: var(--bg-dark);
+      color: var(--color-text-main);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      selection-background-color: #ff4d6d;
+      selection-color: #ffffff;
+    }
+
+    ::selection {
+      background: rgba(255, 77, 109, 0.4);
+      color: #fff;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: inherit;
+    }
+
+    button:focus-visible, a:focus-visible, input:focus-visible {
+      outline: 2px solid var(--color-gold-light);
+      outline-offset: 3px;
+    }
+
+    /* -------------------------------------------------------------
+       3. BACKGROUND LAYERS & ATMOSPHERE
+       ------------------------------------------------------------- */
+    #fx-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .aurora-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 50% 10%, rgba(131, 24, 67, 0.28) 0%, transparent 70%),
+        radial-gradient(circle 50% at 85% 35%, rgba(88, 28, 135, 0.22) 0%, transparent 60%),
+        radial-gradient(circle 45% at 15% 65%, rgba(159, 18, 57, 0.2) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 50% 90%, rgba(67, 20, 78, 0.3) 0%, transparent 80%),
+        linear-gradient(180deg, #07060a 0%, #110714 50%, #08060d 100%);
+    }
+
+    /* Subtle cinematic film grain overlay */
+    .film-grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* Subtle vintage vignette */
+    .vignette {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.75);
+    }
+
+    /* -------------------------------------------------------------
+       4. MAIN CONTAINER & SECTIONS
+       ------------------------------------------------------------- */
+    .app-wrapper {
+      position: relative;
+      z-index: 3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 150px; /* space for fixed audio player */
+    }
+
+    /* -------------------------------------------------------------
+       5. TOP NAVIGATION & KEEPSAKE CONTROLS
+       ------------------------------------------------------------- */
+    .site-header {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .brand-symbol {
+      width: 28px;
+      height: 28px;
+      color: var(--color-rose);
+      filter: drop-shadow(0 0 8px rgba(255, 77, 109, 0.6));
+      animation: gentle-sway 4s ease-in-out infinite;
+    }
+
+    .brand-text {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-champagne);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .glass-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.15rem;
+      background: var(--bg-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-glass);
+      border-radius: 9999px;
+      color: var(--color-champagne);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .glass-btn:hover {
+      background: rgba(55, 25, 68, 0.7);
+      border-color: var(--border-glass-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(255, 77, 109, 0.25);
+      color: #fff;
+    }
+
+    .glass-btn:active {
+      transform: translateY(0);
+    }
+
+    /* -------------------------------------------------------------
+       6. HERO SECTION
+       ------------------------------------------------------------- */
+    .hero-section {
+      width: 100%;
+      max-width: 1000px;
+      margin: 1.5rem auto 0;
+      padding: 1.5rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--color-gold-light);
+      margin-bottom: 0.85rem;
+      opacity: 0.9;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .hero-kicker::before,
+    .hero-kicker::after {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold));
+    }
+    .hero-kicker::after {
+      background: linear-gradient(90deg, var(--color-gold), transparent);
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 7.5vw, 6.2rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 0.85rem;
+      text-shadow: 0 2px 20px rgba(255, 77, 109, 0.3);
+    }
+
+    .hero-title em {
+      font-family: var(--font-script);
+      font-style: normal;
+      font-size: 1.25em;
+      color: var(--color-rose-soft);
+      display: inline-block;
+      padding: 0 0.15em;
+      background: linear-gradient(135deg, #ffa8ba 0%, #ff4d6d 50%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 25px rgba(255, 77, 109, 0.45));
+    }
+
+    .hero-subtitle {
+      max-width: 620px;
+      font-family: var(--font-serif);
+      font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    /* -------------------------------------------------------------
+       7. CENTRAL CELESTIAL HEART RELIC (FOCAL POINT)
+       ------------------------------------------------------------- */
+    .relic-container {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      margin: 1rem 0 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+
+    @media (min-width: 640px) {
+      .relic-container {
+        width: 380px;
+        height: 380px;
+      }
+    }
+
+    /* Celestial orbiting rings */
+    .celestial-orbit {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px dashed rgba(245, 158, 11, 0.22);
+      animation: spin-clockwise 60s linear infinite;
+      pointer-events: none;
+    }
+
+    .celestial-orbit.reverse {
+      inset: 22px;
+      border: 1px solid rgba(255, 77, 109, 0.18);
+      border-dasharray: 4, 12;
+      animation: spin-counter 45s linear infinite;
+    }
+
+    .orbit-star {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: var(--color-gold-light);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--color-gold);
+    }
+
+    .orbit-star.two {
+      top: 50%;
+      left: 100%;
+      transform: translate(-50%, -50%);
+      width: 7px;
+      height: 7px;
+      background: var(--color-rose-soft);
+      box-shadow: 0 0 10px var(--color-rose);
+    }
+
+    .orbit-star.three {
+      top: 85%;
+      left: 20%;
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      box-shadow: 0 0 8px #fff;
+    }
+
+    /* The glowing halo backing */
+    .relic-glow {
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 77, 109, 0.4) 0%, rgba(245, 158, 11, 0.18) 50%, transparent 75%);
+      filter: blur(28px);
+      animation: glow-pulse 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    /* Central Heart Button */
+    .heart-button {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 35% 35%, rgba(68, 16, 42, 0.8) 0%, rgba(28, 8, 22, 0.95) 85%);
+      border: 1px solid rgba(255, 182, 193, 0.28);
+      border-radius: 50%;
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.6),
+        inset 0 2px 12px rgba(255, 255, 255, 0.15),
+        0 0 45px rgba(255, 77, 109, 0.35);
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .heart-button:hover {
+      transform: scale(1.06);
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.7),
+        inset 0 2px 16px rgba(255, 255, 255, 0.25),
+        0 0 60px rgba(255, 77, 109, 0.55);
+    }
+
+    .heart-button:active {
+      transform: scale(0.96);
+    }
+
+    .heart-svg {
+      width: 100px;
+      height: 100px;
+      filter: drop-shadow(0 0 16px rgba(255, 77, 109, 0.85));
+      animation: heartbeat 2.2s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .heart-hint {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-gold-light);
+      background: rgba(22, 10, 24, 0.85);
+      padding: 0.3rem 0.85rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      backdrop-filter: blur(8px);
+      white-space: nowrap;
+      pointer-events: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .heart-counter {
+      margin-top: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .heart-counter span {
+      color: var(--color-rose-soft);
+      font-weight: 600;
+    }
+
+    /* -------------------------------------------------------------
+       8. ROTATING ROMANTIC MESSAGES (ECHOES OF LOVE)
+       ------------------------------------------------------------- */
+    .quotes-card-wrapper {
+      width: 100%;
+      max-width: 780px;
+      margin: 1.5rem auto 3rem;
+      padding: 0 1.25rem;
+    }
+
+    .quotes-card {
+      position: relative;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 2.25rem 2rem 1.75rem;
+      box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .quotes-card:hover {
+      border-color: rgba(255, 182, 193, 0.3);
+    }
+
+    .quotes-card::before {
+      content: '"';
+      position: absolute;
+      top: -15px;
+      left: 20px;
+      font-family: var(--font-serif);
+      font-size: 7.5rem;
+      color: rgba(255, 77, 109, 0.12);
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .quote-content-area {
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .quote-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.25rem, 2.8vw, 1.75rem);
+      font-weight: 300;
+      line-height: 1.5;
+      color: #fff;
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .quote-author {
+      margin-top: 1rem;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-gold-light);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .quote-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .quote-nav-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--color-champagne);
+      transition: var(--transition-smooth);
+    }
+
+    .icon-btn:hover {
+      background: rgba(255, 77, 109, 0.25);
+      border-color: rgba(255, 77, 109, 0.4);
+      color: #fff;
+      transform: scale(1.08);
+    }
+
+    .quote-progress-track {
+      flex: 1;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 9999px;
+      margin: 0 1.25rem;
+      overflow: hidden;
+    }
+
+    .quote-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--color-rose), var(--color-gold));
+      transition: width 0.1s linear;
+    }
+
+    .quote-counter {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--color-text-dim);
+      font-family: var(--font-display);
+    }
+
+    /* -------------------------------------------------------------
+       9. TIMELESS KEEPSAKES (INTERACTIVE LOVE SUITE)
+       ------------------------------------------------------------- */
+    .keepsakes-section {
+      width: 100%;
+      max-width: 1100px;
+      margin: 1rem auto 4rem;
+      padding: 0 1.5rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.25rem;
+    }
+
+    .section-kicker {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--color-rose-soft);
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 300;
+      color: #fff;
+    }
+
+    .keepsakes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .keepsake-card {
+      position: relative;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 20px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .keepsake-card:hover {
+      border-color: rgba(255, 182, 193, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(255, 77, 109, 0.2);
+    }
+
+    .keepsake-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-gold-light);
+      margin-bottom: 1rem;
+    }
+
+    .keepsake-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 0.6rem;
+      line-height: 1.25;
+    }
+
+    .keepsake-desc {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+      margin-bottom: 1.5rem;
+    }
+
+    .keepsake-action-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--color-blush);
+      font-weight: 500;
+    }
+
+    .arrow-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .keepsake-card:hover .arrow-icon {
+      transform: translateX(4px);
+    }
+
+    /* -------------------------------------------------------------
+       9B. PET NAMES & ENDEARMENTS BAR
+       ------------------------------------------------------------- */
+    .pet-names-wrapper {
+      margin: 0.75rem 0 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .pet-name-item {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--color-champagne);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.9rem;
+      background: rgba(255, 77, 109, 0.1);
+      border: 1px solid rgba(255, 182, 193, 0.22);
+      border-radius: 9999px;
+      backdrop-filter: blur(8px);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .pet-name-item:hover {
+      background: rgba(255, 77, 109, 0.25);
+      border-color: var(--color-rose);
+      color: #fff;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+    }
+
+    /* -------------------------------------------------------------
+       9C. MEMORY PHOTO GALLERY (DIPTO & POPI)
+       ------------------------------------------------------------- */
+    .memories-section {
+      width: 100%;
+      max-width: 1200px;
+      margin: 1.5rem auto 4.5rem;
+      padding: 0 1.5rem;
+    }
+
+    .memories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .polaroid-frame {
+      position: relative;
+      background: #faf6f0;
+      padding: 12px 12px 20px;
+      border-radius: 8px;
+      box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.5),
+        0 2px 6px rgba(0, 0, 0, 0.2);
+      color: #2b1f24;
+      cursor: pointer;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .polaroid-frame:nth-child(even) {
+      transform: rotate(1.2deg);
+    }
+    .polaroid-frame:nth-child(odd) {
+      transform: rotate(-1.4deg);
+    }
+
+    .polaroid-frame:hover {
+      transform: translateY(-6px) scale(1.025) rotate(0deg);
+      z-index: 10;
+      box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.7),
+        0 0 25px rgba(255, 77, 109, 0.35);
+    }
+
+    .polaroid-pin {
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #ffd166 0%, #b45309 100%);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      z-index: 2;
+    }
+
+    .polaroid-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #1c0e18;
+    }
+
+    .polaroid-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .polaroid-frame:hover .polaroid-img {
+      transform: scale(1.05);
+    }
+
+    .polaroid-caption {
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .polaroid-title {
+      font-family: var(--font-script);
+      font-size: 1.65rem;
+      color: #3f1d2b;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .polaroid-desc {
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #6b4d57;
+      line-height: 1.35;
+    }
+
+    .polaroid-tag {
+      margin-top: 6px;
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #9f1239;
+    }
+
+    /* Memories Upload / Action Banner */
+    .memories-upload-banner {
+      max-width: 680px;
+      margin: 0 auto 2.25rem;
+      background: rgba(38, 16, 36, 0.7);
+      border: 1px dashed rgba(255, 182, 193, 0.35);
+      border-radius: 18px;
+      padding: 1.25rem 1.75rem;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      transition: var(--transition-smooth);
+    }
+
+    .memories-upload-banner.dragover {
+      border-color: var(--color-rose);
+      background: rgba(88, 28, 68, 0.6);
+      transform: scale(1.02);
+    }
+
+    .upload-banner-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--color-champagne);
+      margin-bottom: 0.35rem;
+    }
+
+    .upload-banner-desc {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.45;
+    }
+
+    .upload-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .upload-primary-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.4rem;
+      background: linear-gradient(135deg, var(--color-rose) 0%, #be123c 100%);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .upload-primary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 77, 109, 0.6);
+    }
+
+    .polaroid-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 50% 40%, #3d1428 0%, #170715 100%);
+      color: var(--color-champagne);
+      padding: 1rem;
+      text-align: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .polaroid-placeholder svg {
+      width: 36px;
+      height: 36px;
+      color: var(--color-rose-soft);
+      margin-bottom: 0.5rem;
+      filter: drop-shadow(0 0 8px rgba(255, 77, 109, 0.5));
+    }
+
+    .polaroid-placeholder span {
+      font-size: 0.75rem;
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--color-text-muted);
+    }
+
+    .polaroid-change-badge {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 9999px;
+      padding: 4px 8px;
+      font-size: 0.65rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      opacity: 0.85;
+      transition: var(--transition-smooth);
+    }
+
+    .polaroid-frame:hover .polaroid-change-badge {
+      opacity: 1;
+      background: rgba(190, 18, 60, 0.85);
+      border-color: var(--color-rose);
+    }
+
+    /* Lightbox Modal */
+    .lightbox-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 3, 8, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 250;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .lightbox-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 720px;
+      width: 100%;
+      background: #faf6f0;
+      border-radius: 16px;
+      padding: 16px 16px 24px;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85);
+      color: #2b1f24;
+      text-align: center;
+      transform: scale(0.95);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lightbox-backdrop.is-open .lightbox-content {
+      transform: scale(1);
+    }
+
+    .lightbox-img {
+      width: 100%;
+      max-height: 60vh;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #110714;
+    }
+
+    .lightbox-caption-area {
+      margin-top: 1rem;
+    }
+
+    .lightbox-title {
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      color: #881337;
+    }
+
+    .lightbox-desc {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: #583a45;
+      margin-top: 0.3rem;
+    }
+
+    .lightbox-nav-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    /* -------------------------------------------------------------
+       10. TIMELINE / DAYS TOGETHER COUNTER
+       ------------------------------------------------------------- */
+    .counter-section {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 4rem;
+      padding: 0 1.5rem;
+    }
+
+    .counter-box {
+      background: linear-gradient(135deg, rgba(38, 14, 34, 0.7) 0%, rgba(18, 9, 24, 0.85) 100%);
+      border: 1px solid rgba(255, 182, 193, 0.22);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 2.25rem 2rem;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .counter-kicker {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-gold-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .counter-names {
+      font-family: var(--font-script);
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      color: var(--color-rose-soft);
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .timer-digits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 580px) {
+      .timer-digits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .digit-cell {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 1rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .digit-number {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+      text-shadow: 0 0 15px rgba(255, 77, 109, 0.4);
+    }
+
+    .digit-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-text-dim);
+      margin-top: 0.4rem;
+    }
+
+    .counter-edit-btn {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      transition: color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .counter-edit-btn:hover {
+      color: var(--color-champagne);
+    }
+
+    /* -------------------------------------------------------------
+       11. CINEMATIC MUSIC PLAYER (FIXED GLASS DOCK)
+       ------------------------------------------------------------- */
+    .music-dock {
+      position: fixed;
+      bottom: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 2.5rem);
+      max-width: 980px;
+      z-index: 100;
+      background: rgba(18, 9, 24, 0.78);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(255, 182, 193, 0.24);
+      border-radius: 24px;
+      padding: 0.85rem 1.5rem;
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(255, 77, 109, 0.2),
+        inset 0 1px 1px rgba(255, 255, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      transition: var(--transition-smooth);
+    }
+
+    @media (max-width: 768px) {
+      .music-dock {
+        flex-direction: column;
+        gap: 0.75rem;
+        bottom: 0.75rem;
+        padding: 0.85rem 1rem;
+        border-radius: 20px;
+      }
+    }
+
+    /* Left: Track Information & Vinyl Animation */
+    .player-track-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      min-width: 220px;
+    }
+
+    .vinyl-wrapper {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+
+    .vinyl-disc {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle, #2a1120 30%, #0a040b 70%);
+      border: 2px solid rgba(255, 182, 193, 0.35);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: spin-clockwise 8s linear infinite;
+      animation-play-state: paused;
+    }
+
+    .vinyl-disc.is-playing {
+      animation-play-state: running;
+    }
+
+    .vinyl-center {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--color-rose);
+      box-shadow: 0 0 8px rgba(255, 77, 109, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vinyl-center-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .track-meta {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .track-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 170px;
+    }
+
+    .track-artist {
+      font-size: 0.72rem;
+      color: var(--color-rose-soft);
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 170px;
+    }
+
+    /* Center: Transport Controls & Seekbar */
+    .player-center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      max-width: 460px;
+      width: 100%;
+    }
+
+    .player-buttons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .play-btn-large {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-rose) 0%, #db2777 100%);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(255, 77, 109, 0.55);
+      transition: var(--transition-smooth);
+    }
+
+    .play-btn-large:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(255, 77, 109, 0.75);
+    }
+
+    .play-btn-large:active {
+      transform: scale(0.95);
+    }
+
+    .player-progress-row {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .time-stamp {
+      font-size: 0.7rem;
+      font-family: var(--font-sans);
+      color: var(--color-text-dim);
+      min-width: 32px;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .seek-slider {
+      flex: 1;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 4px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.15);
+      outline: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .seek-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--color-champagne);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    .seek-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.3);
+    }
+
+    /* Right: Visualizer & Volume */
+    .player-right {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      min-width: 190px;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 768px) {
+      .player-right {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    /* Animated Visualizer Bars */
+    .visualizer-container {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 20px;
+      padding: 0 4px;
+    }
+
+    .v-bar {
+      width: 3px;
+      background: linear-gradient(180deg, var(--color-gold-light), var(--color-rose));
+      border-radius: 3px;
+      height: 4px;
+      transition: height 0.15s ease;
+    }
+
+    .visualizer-container.playing .v-bar:nth-child(1) { animation: bounce-bar 0.9s ease-in-out infinite 0.1s; }
+    .visualizer-container.playing .v-bar:nth-child(2) { animation: bounce-bar 0.8s ease-in-out infinite 0.3s; }
+    .visualizer-container.playing .v-bar:nth-child(3) { animation: bounce-bar 1.1s ease-in-out infinite 0.2s; }
+    .visualizer-container.playing .v-bar:nth-child(4) { animation: bounce-bar 0.7s ease-in-out infinite 0.4s; }
+    .visualizer-container.playing .v-bar:nth-child(5) { animation: bounce-bar 1.0s ease-in-out infinite 0.15s; }
+    .visualizer-container.playing .v-bar:nth-child(6) { animation: bounce-bar 0.85s ease-in-out infinite 0.35s; }
+    .visualizer-container.playing .v-bar:nth-child(7) { animation: bounce-bar 0.95s ease-in-out infinite 0.25s; }
+
+    .volume-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .vol-slider {
+      width: 75px;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 3px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.2);
+      outline: none;
+      cursor: pointer;
+    }
+
+    .vol-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-champagne);
+      cursor: pointer;
+    }
+
+    /* -------------------------------------------------------------
+       12. HIDDEN YOUTUBE IFRAME CONTAINER
+       ------------------------------------------------------------- */
+    #yt-hidden-wrapper {
+      position: fixed;
+      top: -9999px;
+      left: -9999px;
+      width: 320px;
+      height: 240px;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    /* -------------------------------------------------------------
+       13. MODALS (LOVE LETTER, CONSTELLATION, POLAROID)
+       ------------------------------------------------------------- */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 4, 10, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .modal-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-sheet {
+      position: relative;
+      width: 100%;
+      max-width: 620px;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: #fbf7ee; /* Vintage parchment */
+      color: #2b1f1d;
+      border-radius: 20px;
+      padding: 2.75rem 2.25rem;
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.8),
+        0 0 50px rgba(255, 77, 109, 0.3);
+      transform: translateY(20px) scale(0.95);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.is-open .modal-sheet {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.08);
+      color: #2b1f1d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+    }
+
+    .modal-close-btn:hover {
+      background: rgba(225, 29, 72, 0.15);
+      color: var(--color-rose);
+    }
+
+    .letter-wax-seal {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #be123c 0%, #881337 100%);
+      box-shadow: 0 4px 15px rgba(136, 19, 55, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffd6e0;
+      margin: 0 auto 1.5rem;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .letter-date {
+      text-align: right;
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: #785954;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .letter-salutation {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1c110f;
+      margin-bottom: 1rem;
+    }
+
+    .letter-body {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #3b2826;
+      margin-bottom: 1.75rem;
+    }
+
+    .letter-body p {
+      margin-bottom: 1rem;
+      text-indent: 1.5rem;
+    }
+
+    .letter-signature {
+      text-align: right;
+      font-family: var(--font-script);
+      font-size: 2.25rem;
+      color: #881337;
+      line-height: 1.2;
+    }
+
+    /* Constellation Modal Canvas */
+    .constellation-wrapper {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      background: #08060f;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    #constellation-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .constellation-tip {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.7);
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      color: var(--color-gold-light);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      pointer-events: none;
+    }
+
+    /* Toast Notification */
+    .toast-pill {
+      position: fixed;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(-20px);
+      background: rgba(28, 10, 24, 0.92);
+      border: 1px solid rgba(255, 77, 109, 0.4);
+      color: #fff;
+      font-size: 0.85rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      z-index: 300;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .toast-pill.is-active {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* -------------------------------------------------------------
+       14. KEYFRAME ANIMATIONS
+       ------------------------------------------------------------- */
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      14% { transform: scale(1.12); }
+      28% { transform: scale(1.04); }
+      42% { transform: scale(1.15); }
+      70% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes glow-pulse {
+      0%, 100% { opacity: 0.45; transform: scale(0.95); }
+      50% { opacity: 0.8; transform: scale(1.08); }
+    }
+
+    @keyframes spin-clockwise {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes spin-counter {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+
+    @keyframes gentle-sway {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-3px) rotate(4deg); }
+    }
+
+    @keyframes bounce-bar {
+      0%, 100% { height: 4px; }
+      50% { height: 18px; }
+    }
+
+    /* Reduced Motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background visualizer canvas -->
+  <canvas id="fx-canvas"></canvas>
+  <div class="aurora-bg"></div>
+  <div class="film-grain"></div>
+  <div class="vignette"></div>
+
+  <!-- Toast feedback pill -->
+  <div id="toast" class="toast-pill" role="status" aria-live="polite">Romantic blessing sent ❤️</div>
+
+  <div class="app-wrapper">
+    <!-- Top Site Navigation -->
+    <header class="site-header">
+      <div class="brand-mark">
+        <svg class="brand-symbol" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <span class="brand-text">Dipto &amp; Popi · Forever</span>
+      </div>
+
+      <div class="nav-actions">
+        <button id="letter-trigger-nav" class="glass-btn" title="Open Love Letter for Popi">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Letter to Popi</span>
+        </button>
+        <button id="burst-trigger-nav" class="glass-btn" title="Send Petal Shower">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <span>Shower Love</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main class="hero-section">
+      <div class="hero-kicker">A Sacred Devotion Across Time · Dipto &amp; Popi</div>
+      <h1 class="hero-title">I Love You <em>Forever</em></h1>
+
+      <!-- Popi's Sweet Endearments / Pet Names Bar -->
+      <div class="pet-names-wrapper" aria-label="Endearments for Popi">
+        <button class="pet-name-item" data-name="Sona" title="My Precious Sona"><span>✨</span> Sona</button>
+        <button class="pet-name-item" data-name="Jan" title="My Heart and Soul, Jan"><span>❤️</span> Jan</button>
+        <button class="pet-name-item" data-name="Pakhi" title="My Free-Spirited Pakhi"><span>🕊️</span> Pakhi</button>
+        <button class="pet-name-item" data-name="Koliza" title="Deep in My Heart, Koliza"><span>🌸</span> Koliza</button>
+        <button class="pet-name-item" data-name="Bou Jan" title="My Beautiful Bou Jan"><span>💍</span> Bou Jan</button>
+      </div>
+
+      <p class="hero-subtitle">
+        "To my Sona, my Jan, my Pakhi, my Koliza, and my Bou Jan — since 7th January 2024 at 12:32 AM, every single beat of my heart has belonged only to you."
+      </p>
+
+      <!-- Striking Central Heart & Celestial Astrolabe -->
+      <div class="relic-container">
+        <!-- Orbit rings -->
+        <div class="celestial-orbit">
+          <div class="orbit-star"></div>
+          <div class="orbit-star two"></div>
+        </div>
+        <div class="celestial-orbit reverse">
+          <div class="orbit-star three"></div>
+        </div>
+
+        <div class="relic-glow"></div>
+
+        <!-- Interactive Heart Core -->
+        <button id="heart-pulse-btn" class="heart-button" aria-label="Touch to send an eternal pulse of love to Popi" title="Click to send love to Popi">
+          <svg class="heart-svg" viewBox="0 0 24 24" fill="url(#roseGoldGrad)">
+            <defs>
+              <linearGradient id="roseGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ff758c" />
+                <stop offset="45%" stop-color="#ff4d6d" />
+                <stop offset="100%" stop-color="#f59e0b" />
+              </linearGradient>
+            </defs>
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          <span class="heart-hint">Touch Dipto's Heart</span>
+        </button>
+      </div>
+
+      <div class="heart-counter">
+        <span id="pulses-count">1,024</span> Eternal Heartbeats Shared for Popi
+      </div>
+    </main>
+
+    <!-- Dynamic Romantic Quotes Section ("Echoes of My Heart") -->
+    <section class="quotes-card-wrapper" aria-label="Rotating romantic quotes">
+      <div class="quotes-card">
+        <div class="quote-content-area">
+          <p id="quote-text" class="quote-text">
+            "If I had a flower for every time I thought of you, I could walk through my garden forever."
+          </p>
+          <div id="quote-author" class="quote-author">
+            <span>Alfred Lord Tennyson</span>
+            <span aria-hidden="true">·</span>
+            <span>Timeless Memory</span>
+          </div>
+        </div>
+
+        <div class="quote-controls">
+          <div class="quote-nav-group">
+            <button id="prev-quote-btn" class="icon-btn" aria-label="Previous quote" title="Previous quote">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button id="next-quote-btn" class="icon-btn" aria-label="Next quote" title="Next quote">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <button id="copy-quote-btn" class="icon-btn" aria-label="Copy romantic quote" title="Copy quote">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+          </div>
+
+          <div class="quote-progress-track">
+            <div id="quote-progress" class="quote-progress-bar"></div>
+          </div>
+
+          <div id="quote-index" class="quote-counter">01 / 10</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SACRED MEMORY GALLERY (DIPTO & POPI'S PICTURES) -->
+    <section class="memories-section" aria-label="Our Picture Memories" id="memories-dropzone">
+      <div class="section-header">
+        <div class="section-kicker">Our Love Story in Frames</div>
+        <h2 class="section-title">Memories of Dipto &amp; Popi</h2>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-top: 0.5rem; font-family: var(--font-serif); font-style: italic;">
+          Every photograph holds a heartbeat; every glance holds a lifetime of love.
+        </p>
+      </div>
+
+      <!-- Action Banner to Load Photos -->
+      <div class="memories-upload-banner">
+        <div class="upload-banner-title">📸 Load Dipto &amp; Popi's Photos</div>
+        <p class="upload-banner-desc">
+          Tap the button below to select your 10 photos from your phone or computer. They will be stored permanently right in this browser so your album shines forever!
+        </p>
+        <div class="upload-btn-group">
+          <button type="button" id="btn-select-photos" class="upload-primary-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <span>Select All 10 Photos at Once</span>
+          </button>
+          <button type="button" id="btn-reset-photos" class="glass-btn" style="padding: 0.55rem 1rem;">
+            <span>Change / Clear Photos</span>
+          </button>
+        </div>
+        <input type="file" id="batch-photo-input" multiple accept="image/*" style="display: none;" />
+        <input type="file" id="single-photo-input" accept="image/*" style="display: none;" />
+      </div>
+
+      <div class="memories-grid" id="memories-grid">
+        <!-- Photo 1 -->
+        <div class="polaroid-frame memory-item" data-index="0" tabindex="0" role="button" aria-label="Standing Together in Love">
+          <div class="polaroid-pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img class="polaroid-img" src="/memories/memory_1.jpg" alt="Dipto and Popi standing together in love" loading="lazy" onerror="this.onerror=null; this.src='https://i.ibb.co/99MCMRsr/Whats-App-Image-2026-10-02-at-10-43-41-PM.jpg';" />
+            <div class="polaroid-change-badge"><span>📷</span> Change</div>
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title">Standing Together in Love</div>
+            <div class="polaroid-desc">Dipto and Popi looking radiant together, holding roses of eternal love.</div>
+            <div class="polaroid-tag">Our Devotion</div>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="polaroid-frame memory-item" data-index="1" tabindex="0" role="button" aria-label="Roses Upon My Heart">
+          <div class="polaroid-pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img class="polaroid-img" src="/memories/memory_2.jpg" alt="Popi's hand with mehendi and roses resting on Dipto's chest" loading="lazy" onerror="this.onerror=null; this.src='https://i.ibb.co/nMkSZJ3b/Whats-App-Image-2026-06-27-at-5-42-01-PM-1.jpg';" />
+            <div class="polaroid-change-badge"><span>📷</span> Change</div>
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title">Roses Upon My Heart</div>
+            <div class="polaroid-desc">Your mehndi hand resting upon my chest, flowers blooming between us.</div>
+            <div class="polaroid-tag">Mehendi &amp; Roses</div>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="polaroid-frame memory-item" data-index="2" tabindex="0" role="button" aria-label="Resting on My Shoulder">
+          <div class="polaroid-pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img class="polaroid-img" src="/memories/memory_3.jpg" alt="Popi resting head on Dipto's shoulder wearing blue saree" loading="lazy" onerror="this.onerror=null; this.src='https://i.ibb.co/HLm7r0F7/Whats-App-Image-2026-06-27-at-5-42-01-PM.jpg';" />
+            <div class="polaroid-change-badge"><span>📷</span> Change</div>
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title">My Shoulder, Bou Jan</div>
+            <div class="polaroid-desc">When you lean your head on my shoulder, the world turns quietly peaceful.</div>
+            <div class="polaroid-tag">Royal Blue Elegance</div>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="polaroid-frame memory-item" data-index="3" tabindex="0" role="button" aria-label="Sunset Forehead Kiss">
+          <div class="polaroid-pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img class="polaroid-img" src="/memories/memory_4.jpg" alt="Dipto kissing Popi's forehead by river at sunset" loading="lazy" onerror="this.onerror=null; this.src='https://i.ibb.co/Kj434wPN/Whats-App-Image-2026-06-27-at-5-42-02-PM-1.jpg';" />
+            <div class="polaroid-change-badge"><span>📷</span> Change</div>
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title">Sunset Forehead Kiss</div>
+            <div class="polaroid-desc">A gentle kiss by the river, where the dusk whispers of our tomorrow.</div>
+            <div class="polaroid-tag">River Sunset Vow</div>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="polaroid-frame memory-item" data-index="4" tabindex="0" role="button" aria-label="Crimson Love">
+          <div class="polaroid-pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img class="polaroid-img" src="/memories/memory_5.jpg" alt="Popi in red saree and Dipto kissing forehead in garden" loading="lazy" onerror="this.onerror=null; this.src='https://i.ibb.co/Y7DQdRN5/Whats-App-Image-2026-06-27-at-5-42-02-PM.jpg';" />
+            <div class="polaroid-change-badge"><span>📷</span> Change</div>
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title">Crimson Love · My Koliza</div>
+            <div class="polaroid-desc">Wrapped in scarlet red saree and fragrant blooms, my heart beats for you.</div>
+            <div class="polaroid-tag">Scarlet Romance</div>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="polaroid-frame memory-item" data-index="5" tabindex="0" role="button" aria-label="Inside Our Heart">
+          <div class="polaroid-pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img class="polaroid-img" src="/memories/memory_6.jpg" alt="Dipto and Popi framed in giant red heart sculpture in park" loading="lazy" onerror="this.onerror=null; this.src='https://i.ibb.co/twRLt9vg/Whats-App-Image-2026-06-27-at-5-42-03-PM.jpg';" />
+            <div class="polaroid-change-badge"><span>📷</span> Change</div>
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title">Inside Our Heart, Sona</div>
+            <div class="polaroid-desc">Standing hand-in-hand within the grand heart, right where we belong.</div>
+            <div class="polaroid-tag">Garden of Love</div>
+          </div>
+        </div>
+
+        <!-- Photo 7 -->
+        <div class="polaroid-frame memory-item" data-index="6" tabindex="0" role="button" aria-label="Sweet Embrace">
+          <div class="polaroid-pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img class="polaroid-img" src="/memories/memory_7.jpg" alt="Dipto and Popi sharing sweet romantic embrace" loading="lazy" onerror="this.onerror=null; this.src='https://i.ibb.co/Q7LQ2wb6/Whats-App-Image-2026-07-22-at-11-50-41-PM.jpg';" />
+            <div class="polaroid-change-badge"><span>📷</span> Change</div>
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title">Sweet Embrace · Popi &amp; Dipto</div>
+            <div class="polaroid-desc">Cherishing every quiet second together, laughing under the starlit sky.</div>
+            <div class="polaroid-tag">Endless Smiles</div>
+          </div>
+        </div>
+
+        <!-- Photo 8 -->
+        <div class="polaroid-frame memory-item" data-index="7" tabindex="0" role="button" aria-label="Under the City Lights">
+          <div class="polaroid-pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img class="polaroid-img" src="/memories/memory_8.jpg" alt="Real photograph of Dipto placing veil over Popi on balcony with city lights" loading="lazy" onerror="this.onerror=null; this.src='https://i.ibb.co/SXRYH0Q6/Whats-App-Image-2026-07-12-at-2-17-17-AM.jpg';" />
+            <div class="polaroid-change-badge"><span>📷</span> Change</div>
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title">Under the City Lights</div>
+            <div class="polaroid-desc">The real rooftop magic, looking deep into each other's eyes on our balcony.</div>
+            <div class="polaroid-tag">Starlight Balcony</div>
+          </div>
+        </div>
+
+        <!-- Photo 9 -->
+        <div class="polaroid-frame memory-item" data-index="8" tabindex="0" role="button" aria-label="Shy Smile Behind the Blooms">
+          <div class="polaroid-pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img class="polaroid-img" src="/memories/memory_9.jpg" alt="Popi holding roses to her smile in garden with Dipto" loading="lazy" onerror="this.onerror=null; this.src='https://i.ibb.co/y9G1Thz/Whats-App-Image-2026-07-16-at-8-56-09-PM.jpg';" />
+            <div class="polaroid-change-badge"><span>📷</span> Change</div>
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title">Shy Smile, My Jan</div>
+            <div class="polaroid-desc">Hiding a tender laugh behind colorful roses, wearing pure happiness.</div>
+            <div class="polaroid-tag">Everlasting Bloom</div>
+          </div>
+        </div>
+
+        <!-- Photo 10 -->
+        <div class="polaroid-frame memory-item" data-index="9" tabindex="0" role="button" aria-label="Our Studio Ghibli Fairytale">
+          <div class="polaroid-pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img class="polaroid-img" src="/memories/memory_10.png" alt="Studio Ghibli watercolor artwork of Dipto and Popi" loading="lazy" onerror="this.onerror=null; this.src='https://i.ibb.co/ycdxqVDy/Gemini-Generated-Image-p1e3rpp1e3rpp1e3-1.png';" />
+            <div class="polaroid-change-badge"><span>📷</span> Change</div>
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title">Our Studio Ghibli Fairytale</div>
+            <div class="polaroid-desc">A magical watercolor memory of Dipto &amp; Popi celebrating eternal devotion.</div>
+            <div class="polaroid-tag">Watercolor Dream</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeless Keepsakes (Letters, Constellation, Memory Vault) -->
+    <section class="keepsakes-section">
+      <div class="section-header">
+        <div class="section-kicker">Keepsakes of Eternity</div>
+        <h2 class="section-title">Whispers Sealed in Starlight</h2>
+      </div>
+
+      <div class="keepsakes-grid">
+        <!-- Keepsake 1: Vintage Love Letter -->
+        <article class="keepsake-card" id="card-love-letter" tabindex="0" role="button" aria-label="Open handwritten love letter for Popi">
+          <div>
+            <div class="keepsake-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Sealed Parchment</span>
+            </div>
+            <h3 class="keepsake-title">A Letter For Popi</h3>
+            <p class="keepsake-desc">
+              Unfold Dipto's handwritten letter sealed in crimson wax, bearing vows written for Popi for every tomorrow.
+            </p>
+          </div>
+          <div class="keepsake-action-row">
+            <span>Read Dipto's vows</span>
+            <span class="arrow-icon">→</span>
+          </div>
+        </article>
+
+        <!-- Keepsake 2: Constellation of Vows -->
+        <article class="keepsake-card" id="card-constellation" tabindex="0" role="button" aria-label="View interactive constellation of vows">
+          <div>
+            <div class="keepsake-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Celestial Map</span>
+            </div>
+            <h3 class="keepsake-title">The Constellation</h3>
+            <p class="keepsake-desc">
+              Connect celestial stars into sacred constellations—each starlight node carrying a silent eternal promise for Popi.
+            </p>
+          </div>
+          <div class="keepsake-action-row">
+            <span>Gaze at our stars</span>
+            <span class="arrow-icon">→</span>
+          </div>
+        </article>
+
+        <!-- Keepsake 3: Nostalgic Keepsake Polaroid -->
+        <article class="keepsake-card" id="card-polaroid" tabindex="0" role="button" aria-label="View special polaroid memory">
+          <div>
+            <div class="keepsake-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              <span>Cherished Keepsake</span>
+            </div>
+            <h3 class="keepsake-title">Where It All Began</h3>
+            <p class="keepsake-desc">
+              7th January 2024 at 12:32 AM—the exact minute our universe aligned and two souls became one.
+            </p>
+          </div>
+          <div class="keepsake-action-row">
+            <span>Uncover memory</span>
+            <span class="arrow-icon">→</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Time Cherished Counter (Dipto & Popi · 7th January 2024, 12:32 AM) -->
+    <section class="counter-section">
+      <div class="counter-box">
+        <div class="counter-kicker">Our Journey Started · 7th January 2024, 12:32 AM</div>
+        <div id="counter-names-display" class="counter-names">Dipto &amp; Popi, Forever</div>
+
+        <div class="timer-digits-grid">
+          <div class="digit-cell">
+            <span id="time-days" class="digit-number">0</span>
+            <span class="digit-label">Days</span>
+          </div>
+          <div class="digit-cell">
+            <span id="time-hours" class="digit-number">00</span>
+            <span class="digit-label">Hours</span>
+          </div>
+          <div class="digit-cell">
+            <span id="time-minutes" class="digit-number">00</span>
+            <span class="digit-label">Minutes</span>
+          </div>
+          <div class="digit-cell">
+            <span id="time-seconds" class="digit-number">00</span>
+            <span class="digit-label">Seconds</span>
+          </div>
+        </div>
+
+        <button id="edit-anniversary-btn" class="counter-edit-btn">
+          Personalize Our Names &amp; Date
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- CINEMATIC GLASS MUSIC PLAYER DOCK -->
+  <aside class="music-dock" aria-label="Music Player">
+    <!-- Left: Vinyl & Track Info -->
+    <div class="player-track-info">
+      <div class="vinyl-wrapper">
+        <div id="vinyl-disc" class="vinyl-disc">
+          <div class="vinyl-center">
+            <div class="vinyl-center-dot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="track-meta">
+        <div class="track-title" id="track-title">Can't Help Falling in Love</div>
+        <div class="track-artist" id="track-artist">Acoustic Nostalgia · Elvis Melody</div>
+      </div>
+    </div>
+
+    <!-- Center: Transport & Progress -->
+    <div class="player-center">
+      <div class="player-buttons">
+        <button id="btn-player-rewind" class="icon-btn" aria-label="Rewind 10 seconds" title="Rewind 10s">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
+        </button>
+
+        <button id="btn-player-play" class="play-btn-large" aria-label="Play or Pause Music" title="Play">
+          <svg id="play-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <svg id="pause-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+        </button>
+
+        <button id="btn-player-forward" class="icon-btn" aria-label="Forward 10 seconds" title="Forward 10s">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+        </button>
+
+        <button id="btn-player-fav" class="icon-btn" aria-label="Shower Hearts" title="Love this track">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" color="var(--color-rose)">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="player-progress-row">
+        <span id="current-time" class="time-stamp">0:00</span>
+        <input type="range" id="seek-slider" class="seek-slider" min="0" max="100" value="0" aria-label="Track progress seek">
+        <span id="total-time" class="time-stamp">3:02</span>
+      </div>
+    </div>
+
+    <!-- Right: Visualizer & Volume -->
+    <div class="player-right">
+      <div id="visualizer-bars" class="visualizer-container" title="Audio Spectrum Visualizer">
+        <div class="v-bar"></div>
+        <div class="v-bar"></div>
+        <div class="v-bar"></div>
+        <div class="v-bar"></div>
+        <div class="v-bar"></div>
+        <div class="v-bar"></div>
+        <div class="v-bar"></div>
+      </div>
+
+      <div class="volume-group">
+        <button id="vol-mute-btn" class="icon-btn" style="width: 28px; height: 28px;" aria-label="Mute or Unmute" title="Volume">
+          <svg id="vol-high-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          <svg id="vol-mute-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+        <input type="range" id="vol-slider" class="vol-slider" min="0" max="100" value="80" aria-label="Volume controller">
+      </div>
+    </div>
+  </aside>
+
+  <!-- YouTube Hidden Player Container -->
+  <div id="yt-hidden-wrapper">
+    <div id="youtube-player-mount"></div>
+  </div>
+
+  <!-- MODAL: Handwritten Love Letter -->
+  <div id="modal-love-letter" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-letter-title">
+    <div class="modal-sheet">
+      <button class="modal-close-btn" id="close-letter-modal" aria-label="Close Letter">✕</button>
+      <div class="letter-wax-seal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      </div>
+      <div class="letter-date">Our Journey Began: 7th January 2024, 12:32 AM</div>
+      <h3 id="modal-letter-title" class="letter-salutation">My Dearest Popi,</h3>
+      <div class="letter-body">
+        <p>
+          To my precious <strong>Sona</strong>, my heartbeat and soul (<strong>Jan</strong>), my free-spirited <strong>Pakhi</strong>, the deepest part of my chest (<strong>Koliza</strong>), and my forever <strong>Bou Jan</strong>:
+        </p>
+        <p>
+          On the 7th of January 2024, at exactly 12:32 AM, the universe aligned in pure silence, and our sacred journey began. That was the moment my soul stopped searching, because in your eyes, I found my eternal home.
+        </p>
+        <p>
+          I love you more than words, poetry, or stars could ever express. I love the way your mehndi hand rests gently over my heart, the way you lean your head on my shoulder when the evening falls, and the shy radiance in your smile whenever you hold a rose close to your lips.
+        </p>
+        <p>
+          Through every sunrise we greet together, through every test of time, and into every starlit tomorrow yet unwritten, my promise to you is unwavering: I will love you, protect you, cherish you, and hold your hand forever.
+        </p>
+      </div>
+      <div class="letter-signature">
+        With all my love &amp; soul,<br>
+        Your Dipto ❤️
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Interactive Constellation of Vows -->
+  <div id="modal-constellation" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-constellation-title">
+    <div class="modal-sheet" style="background: #0e0918; color: #fff;">
+      <button class="modal-close-btn" id="close-constellation-modal" style="color: #fff; background: rgba(255,255,255,0.1);" aria-label="Close Constellation">✕</button>
+      <h3 id="modal-constellation-title" style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 0.5rem; text-align: center; color: var(--color-champagne);">
+        The Constellation of Dipto &amp; Popi
+      </h3>
+      <p style="text-align: center; color: var(--color-text-muted); font-size: 0.88rem; margin-bottom: 1.25rem;">
+        Click upon the starlight beacons to reveal the sacred vows inscribed across our sky.
+      </p>
+
+      <div class="constellation-wrapper">
+        <canvas id="constellation-canvas"></canvas>
+        <div class="constellation-tip">✦ Tap any starlight node ✦</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Polaroid Nostalgic Keepsake -->
+  <div id="modal-polaroid" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-polaroid-title">
+    <div class="modal-sheet" style="max-width: 480px; text-align: center; background: #faf5ee; padding: 2rem;">
+      <button class="modal-close-btn" id="close-polaroid-modal" aria-label="Close Memory">✕</button>
+      <div style="background: #fff; padding: 14px 14px 28px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border-radius: 4px; transform: rotate(-1.5deg);">
+        <div style="width: 100%; height: 280px; background: linear-gradient(145deg, #2b1126, #581c3d, #ff758c); border-radius: 2px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+          <!-- Romantic Graphic in Polaroid -->
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="rgba(255,255,255,0.85)">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          <div style="position: absolute; bottom: 12px; left: 14px; font-family: var(--font-display); font-size: 0.7rem; color: #fff; letter-spacing: 0.15em;">
+            7TH JAN 2024 · 12:32 AM
+          </div>
+        </div>
+        <div id="modal-polaroid-title" style="margin-top: 18px; font-family: var(--font-script); font-size: 2.1rem; color: #201318;">
+          "Dipto &amp; Popi · Forever Begins"
+        </div>
+      </div>
+      <p style="margin-top: 1.5rem; font-family: var(--font-serif); font-size: 1rem; color: #6b5550; font-style: italic;">
+        Some moments shine brighter than all the stars in the night sky.
+      </p>
+    </div>
+  </div>
+
+  <!-- MODAL: Fullscreen Memory Photo Lightbox -->
+  <div id="modal-lightbox" class="lightbox-backdrop" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="lightbox-content">
+      <button class="modal-close-btn" id="close-lightbox-modal" aria-label="Close Lightbox">✕</button>
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged Memory Photo" />
+      <div class="lightbox-caption-area">
+        <h3 id="lightbox-title" class="lightbox-title">Memory Title</h3>
+        <p id="lightbox-desc" class="lightbox-desc">Memory Description</p>
+      </div>
+      <div class="lightbox-nav-row">
+        <button id="lightbox-prev-btn" class="icon-btn" aria-label="Previous Memory" style="color: #2b1f24; border-color: rgba(0,0,0,0.15);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <span id="lightbox-counter" style="font-family: var(--font-display); font-size: 0.75rem; letter-spacing: 0.15em; color: #785954;">01 / 10</span>
+        <button id="lightbox-next-btn" class="icon-btn" aria-label="Next Memory" style="color: #2b1f24; border-color: rgba(0,0,0,0.15);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* -----------------------------------------------------------
+         1. AUDIO PLAYER STATE & YOUTUBE API INTEGRATION
+         ----------------------------------------------------------- */
+      // Video ID extracted from user playlist / URL: https://youtu.be/LccmJtnfWd4
+      const YOUTUBE_VIDEO_ID = 'LccmJtnfWd4';
+      let ytPlayer = null;
+      let isPlaying = false;
+      let ytPlayerReady = false;
+      let playerTimer = null;
+      let fallbackAudioCtx = null;
+      let fallbackOscillators = [];
+      let isFallbackPlaying = false;
+
+      const btnPlay = document.getElementById('btn-player-play');
+      const playIcon = document.getElementById('play-icon');
+      const pauseIcon = document.getElementById('pause-icon');
+      const vinylDisc = document.getElementById('vinyl-disc');
+      const visualizerBars = document.getElementById('visualizer-bars');
+      const seekSlider = document.getElementById('seek-slider');
+      const currentTimeEl = document.getElementById('current-time');
+      const totalTimeEl = document.getElementById('total-time');
+      const volSlider = document.getElementById('vol-slider');
+      const volMuteBtn = document.getElementById('vol-mute-btn');
+      const volHighIcon = document.getElementById('vol-high-icon');
+      const volMuteIcon = document.getElementById('vol-mute-icon');
+      const btnRewind = document.getElementById('btn-player-rewind');
+      const btnForward = document.getElementById('btn-player-forward');
+      const btnFav = document.getElementById('btn-player-fav');
+
+      // Load YouTube IFrame API script tag safely
+      const ytScript = document.createElement('script');
+      ytScript.src = 'https://www.youtube.com/iframe_api';
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(ytScript, firstScriptTag);
+
+      window.onYouTubeIframeAPIReady = function () {
+        try {
+          ytPlayer = new YT.Player('youtube-player-mount', {
+            height: '200',
+            width: '200',
+            videoId: YOUTUBE_VIDEO_ID,
+            playerVars: {
+              autoplay: 0,
+              controls: 0,
+              disablekb: 1,
+              enablejsapi: 1,
+              fs: 0,
+              modestbranding: 1,
+              playsinline: 1,
+              rel: 0
+            },
+            events: {
+              onReady: onPlayerReady,
+              onStateChange: onPlayerStateChange,
+              onError: onPlayerError
+            }
+          });
+        } catch (e) {
+          console.warn('YouTube Iframe init error:', e);
+        }
+      };
+
+      function onPlayerReady(event) {
+        ytPlayerReady = true;
+        updateVolume();
+        try {
+          const dur = ytPlayer.getDuration();
+          if (dur && dur > 0) {
+            totalTimeEl.textContent = formatTime(dur);
+          }
+        } catch (err) {}
+      }
+
+      function onPlayerStateChange(event) {
+        if (event.data === YT.PlayerState.PLAYING) {
+          setPlayState(true);
+          startProgressTracking();
+        } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+          setPlayState(false);
+          stopProgressTracking();
+          if (event.data === YT.PlayerState.ENDED) {
+            // Loop video for eternal romantic soundtrack
+            try {
+              ytPlayer.seekTo(0);
+              ytPlayer.playVideo();
+            } catch (e) {}
+          }
+        }
+      }
+
+      function onPlayerError(err) {
+        console.warn('YouTube playback error or restriction, activating romantic synth fallback:', err);
+        // Fallback to soothing ambient acoustic piano chords using Web Audio API
+        startFallbackRomanticSynth();
+      }
+
+      function setPlayState(playing) {
+        isPlaying = playing;
+        if (playing) {
+          playIcon.style.display = 'none';
+          pauseIcon.style.display = 'block';
+          vinylDisc.classList.add('is-playing');
+          visualizerBars.classList.add('playing');
+        } else {
+          playIcon.style.display = 'block';
+          pauseIcon.style.display = 'none';
+          vinylDisc.classList.remove('is-playing');
+          visualizerBars.classList.remove('playing');
+        }
+      }
+
+      function togglePlayPause() {
+        if (ytPlayerReady && ytPlayer && typeof ytPlayer.getPlayerState === 'function') {
+          try {
+            const state = ytPlayer.getPlayerState();
+            if (state === YT.PlayerState.PLAYING) {
+              ytPlayer.pauseVideo();
+            } else {
+              ytPlayer.playVideo();
+            }
+            return;
+          } catch (e) {
+            console.warn('YouTube player call failed, using fallback:', e);
+          }
+        }
+        // Fallback Web Audio toggle
+        toggleFallbackSynth();
+      }
+
+      btnPlay.addEventListener('click', () => {
+        togglePlayPause();
+        triggerHeartBurst(window.innerWidth / 2, window.innerHeight - 70, 8);
+      });
+
+      btnRewind.addEventListener('click', () => {
+        if (ytPlayerReady && ytPlayer) {
+          try {
+            const curr = ytPlayer.getCurrentTime();
+            ytPlayer.seekTo(Math.max(0, curr - 10), true);
+            showToast('Rewound 10 seconds');
+          } catch (e) {}
+        }
+      });
+
+      btnForward.addEventListener('click', () => {
+        if (ytPlayerReady && ytPlayer) {
+          try {
+            const curr = ytPlayer.getCurrentTime();
+            ytPlayer.seekTo(curr + 10, true);
+            showToast('Forward 10 seconds');
+          } catch (e) {}
+        }
+      });
+
+      btnFav.addEventListener('click', (e) => {
+        const rect = btnFav.getBoundingClientRect();
+        triggerHeartBurst(rect.left + rect.width / 2, rect.top, 16);
+        showToast('Devotion added to heart ❤️');
+      });
+
+      function startProgressTracking() {
+        stopProgressTracking();
+        playerTimer = setInterval(() => {
+          if (!ytPlayerReady || !ytPlayer) return;
+          try {
+            const curr = ytPlayer.getCurrentTime() || 0;
+            const dur = ytPlayer.getDuration() || 182;
+            currentTimeEl.textContent = formatTime(curr);
+            totalTimeEl.textContent = formatTime(dur);
+            if (dur > 0) {
+              seekSlider.value = (curr / dur) * 100;
+            }
+          } catch (e) {}
+        }, 500);
+      }
+
+      function stopProgressTracking() {
+        if (playerTimer) {
+          clearInterval(playerTimer);
+          playerTimer = null;
+        }
+      }
+
+      seekSlider.addEventListener('input', () => {
+        if (ytPlayerReady && ytPlayer) {
+          try {
+            const dur = ytPlayer.getDuration() || 182;
+            const targetTime = (seekSlider.value / 100) * dur;
+            currentTimeEl.textContent = formatTime(targetTime);
+          } catch (e) {}
+        }
+      });
+
+      seekSlider.addEventListener('change', () => {
+        if (ytPlayerReady && ytPlayer) {
+          try {
+            const dur = ytPlayer.getDuration() || 182;
+            const targetTime = (seekSlider.value / 100) * dur;
+            ytPlayer.seekTo(targetTime, true);
+          } catch (e) {}
+        }
+      });
+
+      volSlider.addEventListener('input', updateVolume);
+
+      let isMuted = false;
+      let lastVol = 80;
+
+      function updateVolume() {
+        const val = parseInt(volSlider.value, 10);
+        if (ytPlayerReady && ytPlayer) {
+          try {
+            ytPlayer.setVolume(val);
+            if (val === 0) {
+              ytPlayer.mute();
+            } else {
+              ytPlayer.unMute();
+            }
+          } catch (e) {}
+        }
+        if (val === 0) {
+          volHighIcon.style.display = 'none';
+          volMuteIcon.style.display = 'block';
+          isMuted = true;
+        } else {
+          volHighIcon.style.display = 'block';
+          volMuteIcon.style.display = 'none';
+          isMuted = false;
+        }
+      }
+
+      volMuteBtn.addEventListener('click', () => {
+        if (isMuted) {
+          volSlider.value = lastVol || 80;
+          updateVolume();
+        } else {
+          lastVol = parseInt(volSlider.value, 10);
+          volSlider.value = 0;
+          updateVolume();
+        }
+      });
+
+      function formatTime(seconds) {
+        if (isNaN(seconds) || seconds < 0) return '0:00';
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+      }
+
+      // Elegant Fallback Ambient Piano & Chord Synthesizer (Web Audio API)
+      function initAudioContext() {
+        if (!fallbackAudioCtx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) {
+            fallbackAudioCtx = new AudioContext();
+          }
+        }
+        if (fallbackAudioCtx && fallbackAudioCtx.state === 'suspended') {
+          fallbackAudioCtx.resume();
+        }
+      }
+
+      function toggleFallbackSynth() {
+        initAudioContext();
+        if (!fallbackAudioCtx) return;
+        if (isFallbackPlaying) {
+          stopFallbackSynth();
+          setPlayState(false);
+        } else {
+          startFallbackRomanticSynth();
+          setPlayState(true);
+        }
+      }
+
+      let chordInterval = null;
+      function startFallbackRomanticSynth() {
+        initAudioContext();
+        if (!fallbackAudioCtx) return;
+        isFallbackPlaying = true;
+        setPlayState(true);
+
+        // Romantic Chord Progression: Cmaj7 -> Am9 -> Fmaj7 -> Gsus4
+        const chordProgressions = [
+          [261.63, 329.63, 392.00, 493.88], // Cmaj7
+          [220.00, 261.63, 329.63, 392.00, 493.88], // Am9
+          [174.61, 261.63, 329.63, 349.23], // Fmaj7
+          [196.00, 261.63, 392.00, 440.00]  // Gsus4
+        ];
+        let chordIdx = 0;
+
+        function playChord() {
+          if (!isFallbackPlaying || !fallbackAudioCtx) return;
+          const notes = chordProgressions[chordIdx % chordProgressions.length];
+          chordIdx++;
+
+          notes.forEach((freq, i) => {
+            try {
+              const osc = fallbackAudioCtx.createOscillator();
+              const gain = fallbackAudioCtx.createGain();
+              osc.type = i === 0 ? 'triangle' : 'sine';
+              osc.frequency.setValueAtTime(freq, fallbackAudioCtx.currentTime);
+
+              gain.gain.setValueAtTime(0.001, fallbackAudioCtx.currentTime);
+              gain.gain.exponentialRampToValueAtTime(0.035, fallbackAudioCtx.currentTime + 0.3 + (i * 0.1));
+              gain.gain.exponentialRampToValueAtTime(0.0001, fallbackAudioCtx.currentTime + 3.8);
+
+              osc.connect(gain);
+              gain.connect(fallbackAudioCtx.destination);
+
+              osc.start(fallbackAudioCtx.currentTime + (i * 0.08));
+              osc.stop(fallbackAudioCtx.currentTime + 4.2);
+            } catch (e) {}
+          });
+        }
+
+        playChord();
+        if (chordInterval) clearInterval(chordInterval);
+        chordInterval = setInterval(playChord, 3600);
+      }
+
+      function stopFallbackSynth() {
+        isFallbackPlaying = false;
+        if (chordInterval) {
+          clearInterval(chordInterval);
+          chordInterval = null;
+        }
+      }
+
+      /* -----------------------------------------------------------
+         2. ROTATING ROMANTIC QUOTES ("ECHOES OF LOVE")
+         ----------------------------------------------------------- */
+      const romanticQuotes = [
+        {
+          text: "If I had a flower for every time I thought of you, I could walk through my garden forever.",
+          author: "Alfred Lord Tennyson · Timeless Devotion"
+        },
+        {
+          text: "You are the quiet place my heart returns to whenever the world gets loud and unsteady.",
+          author: "Whisper in the Night · Sacred Harbor"
+        },
+        {
+          text: "I have loved you in a thousand dreams, and I will love you across ten thousand realities.",
+          author: "An Inscription of Souls · Eternal Promise"
+        },
+        {
+          text: "Time does not measure how long we have been together; it measures how deeply I fall for you each day.",
+          author: "Echo of the Heart · Timeless Love"
+        },
+        {
+          text: "Across every quiet morning, through every starlit night, yesterday, today, and for every tomorrow.",
+          author: "The Morning Vow · Infinite Grace"
+        },
+        {
+          text: "You didn't just walk into my life; you became the melody I didn't know I was humming all along.",
+          author: "A Symphony of Two · Serenade"
+        },
+        {
+          text: "Even when stars exhaust their light and centuries fade to dust, my hand will still be reaching for yours.",
+          author: "Celestial Inscription · Beyond the Stars"
+        },
+        {
+          text: "In your eyes, I found not just another gaze, but the home my soul had wandered lifetimes searching for.",
+          author: "A Sacred Homecoming · Forever Yours"
+        },
+        {
+          text: "Forever isn't a length of time to me—it is simply the only word that makes sense when I look at you.",
+          author: "A Gentle Realization · Infinite Love"
+        },
+        {
+          text: "Every beat of my heart is a quiet promise that you will never walk through this world alone.",
+          author: "The Eternal Vow · Boundless Shelter"
+        }
+      ];
+
+      let currentQuoteIndex = 0;
+      let quoteTimer = null;
+      let quoteProgressInterval = null;
+      const quoteTextEl = document.getElementById('quote-text');
+      const quoteAuthorEl = document.getElementById('quote-author');
+      const quoteIndexEl = document.getElementById('quote-index');
+      const quoteProgressEl = document.getElementById('quote-progress');
+      const btnPrevQuote = document.getElementById('prev-quote-btn');
+      const btnNextQuote = document.getElementById('next-quote-btn');
+      const btnCopyQuote = document.getElementById('copy-quote-btn');
+      const QUOTE_DURATION = 7500; // 7.5 seconds per quote
+
+      function displayQuote(index) {
+        currentQuoteIndex = (index + romanticQuotes.length) % romanticQuotes.length;
+        const q = romanticQuotes[currentQuoteIndex];
+
+        // Smooth fade out
+        quoteTextEl.style.opacity = '0';
+        quoteTextEl.style.transform = 'translateY(8px)';
+        quoteAuthorEl.style.opacity = '0';
+
+        setTimeout(() => {
+          quoteTextEl.textContent = `"${q.text}"`;
+          quoteAuthorEl.innerHTML = `<span>${q.author.split('·')[0].trim()}</span><span aria-hidden="true">·</span><span>${q.author.split('·')[1]?.trim() || 'Eternal'}</span>`;
+          quoteIndexEl.textContent = `${(currentQuoteIndex + 1).toString().padStart(2, '0')} / ${romanticQuotes.length.toString().padStart(2, '0')}`;
+
+          // Smooth fade in
+          quoteTextEl.style.opacity = '1';
+          quoteTextEl.style.transform = 'translateY(0)';
+          quoteAuthorEl.style.opacity = '1';
+        }, 250);
+
+        resetQuoteTimer();
+      }
+
+      function resetQuoteTimer() {
+        if (quoteTimer) clearTimeout(quoteTimer);
+        if (quoteProgressInterval) clearInterval(quoteProgressInterval);
+
+        quoteProgressEl.style.width = '0%';
+        const startTime = Date.now();
+
+        quoteProgressInterval = setInterval(() => {
+          const elapsed = Date.now() - startTime;
+          const pct = Math.min(100, (elapsed / QUOTE_DURATION) * 100);
+          quoteProgressEl.style.width = `${pct}%`;
+        }, 50);
+
+        quoteTimer = setTimeout(() => {
+          displayQuote(currentQuoteIndex + 1);
+        }, QUOTE_DURATION);
+      }
+
+      btnPrevQuote.addEventListener('click', () => {
+        displayQuote(currentQuoteIndex - 1);
+      });
+
+      btnNextQuote.addEventListener('click', () => {
+        displayQuote(currentQuoteIndex + 1);
+      });
+
+      btnCopyQuote.addEventListener('click', () => {
+        const text = romanticQuotes[currentQuoteIndex].text;
+        navigator.clipboard.writeText(text).then(() => {
+          showToast('Quote copied to clipboard ❤️');
+        }).catch(() => {
+          showToast('Devotion remembered forever ❤️');
+        });
+      });
+
+      // Pause quote rotation on hover
+      const quoteCard = document.querySelector('.quotes-card');
+      quoteCard.addEventListener('mouseenter', () => {
+        if (quoteTimer) clearTimeout(quoteTimer);
+        if (quoteProgressInterval) clearInterval(quoteProgressInterval);
+      });
+      quoteCard.addEventListener('mouseleave', () => {
+        resetQuoteTimer();
+      });
+
+      displayQuote(0);
+
+      /* -----------------------------------------------------------
+         3. INTERACTIVE CENTRAL HEART RELIC
+         ----------------------------------------------------------- */
+      const heartPulseBtn = document.getElementById('heart-pulse-btn');
+      const pulsesCountEl = document.getElementById('pulses-count');
+      let heartbeatCount = parseInt(localStorage.getItem('ily_heartbeats') || '1024', 10);
+      pulsesCountEl.textContent = heartbeatCount.toLocaleString();
+
+      heartPulseBtn.addEventListener('click', (e) => {
+        heartbeatCount++;
+        pulsesCountEl.textContent = heartbeatCount.toLocaleString();
+        localStorage.setItem('ily_heartbeats', heartbeatCount.toString());
+
+        const rect = heartPulseBtn.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        triggerHeartBurst(centerX, centerY, 24);
+        playChime(587.33); // D5 chime
+        showToast('Heartbeat registered forever ❤️');
+      });
+
+      function playChime(frequency) {
+        initAudioContext();
+        if (!fallbackAudioCtx) return;
+        try {
+          const osc = fallbackAudioCtx.createOscillator();
+          const gain = fallbackAudioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(frequency, fallbackAudioCtx.currentTime);
+          gain.gain.setValueAtTime(0.001, fallbackAudioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.06, fallbackAudioCtx.currentTime + 0.05);
+          gain.gain.exponentialRampToValueAtTime(0.0001, fallbackAudioCtx.currentTime + 1.2);
+          osc.connect(gain);
+          gain.connect(fallbackAudioCtx.destination);
+          osc.start();
+          osc.stop(fallbackAudioCtx.currentTime + 1.3);
+        } catch (e) {}
+      }
+
+      /* -----------------------------------------------------------
+         4. CANVAS PARTICLES & HEARTS FX ENGINE
+         ----------------------------------------------------------- */
+      const canvas = document.getElementById('fx-canvas');
+      const ctx = canvas.getContext('2d');
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+
+      function resizeCanvas() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+      }
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      // Starfield background
+      const stars = [];
+      const STAR_COUNT = 85;
+      for (let i = 0; i < STAR_COUNT; i++) {
+        stars.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: Math.random() * 1.5 + 0.4,
+          alpha: Math.random() * 0.7 + 0.2,
+          twinkleSpeed: Math.random() * 0.02 + 0.005,
+          twinkleOffset: Math.random() * Math.PI * 2
+        });
+      }
+
+      // Ambient rising fireflies & floating heart embers
+      const embers = [];
+      const EMBER_COUNT = 30;
+      for (let i = 0; i < EMBER_COUNT; i++) {
+        embers.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: Math.random() * 2 + 1,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: -Math.random() * 0.5 - 0.2,
+          alpha: Math.random() * 0.5 + 0.2,
+          color: Math.random() > 0.4 ? 'rgba(255, 77, 109, ' : 'rgba(245, 158, 11, '
+        });
+      }
+
+      // Dynamic Burst Particles (Created on click/tap)
+      const dynamicParticles = [];
+
+      function triggerHeartBurst(x, y, count = 16) {
+        for (let i = 0; i < count; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 3.5 + 1.2;
+          dynamicParticles.push({
+            x: x,
+            y: y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed - 1.5,
+            size: Math.random() * 14 + 10,
+            alpha: 1,
+            decay: Math.random() * 0.015 + 0.01,
+            rotation: Math.random() * Math.PI * 2,
+            vRot: (Math.random() - 0.5) * 0.1,
+            type: Math.random() > 0.35 ? 'heart' : 'sparkle',
+            color: Math.random() > 0.5 ? '#ff4d6d' : (Math.random() > 0.5 ? '#f59e0b' : '#fda4af')
+          });
+        }
+      }
+
+      // Draw Heart helper on canvas
+      function drawCanvasHeart(ctx, x, y, size, color, alpha, rot) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rot);
+        ctx.globalAlpha = Math.max(0, alpha);
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        const topCurveHeight = size * 0.3;
+        ctx.moveTo(0, topCurveHeight);
+        // top left curve
+        ctx.bezierCurveTo(
+          -size / 2, -size / 2,
+          -size, topCurveHeight / 3,
+          0, size
+        );
+        // top right curve
+        ctx.bezierCurveTo(
+          size, topCurveHeight / 3,
+          size / 2, -size / 2,
+          0, topCurveHeight
+        );
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      }
+
+      // Draw sparkle
+      function drawSparkle(ctx, x, y, size, color, alpha) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.globalAlpha = Math.max(0, alpha);
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.arc(0, 0, size * 0.3, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+
+      // Animation Loop
+      let lastTime = 0;
+      function renderLoop(time) {
+        requestAnimationFrame(renderLoop);
+        ctx.clearRect(0, 0, width, height);
+
+        // 1. Draw Starfield
+        for (let i = 0; i < stars.length; i++) {
+          const s = stars[i];
+          const brightness = s.alpha + Math.sin(time * s.twinkleSpeed + s.twinkleOffset) * 0.25;
+          ctx.fillStyle = `rgba(255, 248, 230, ${Math.max(0.1, brightness)})`;
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // 2. Draw Gentle Embers
+        for (let i = 0; i < embers.length; i++) {
+          const e = embers[i];
+          e.y += e.vy;
+          e.x += e.vx + Math.sin(time * 0.001 + i) * 0.3;
+          if (e.y < -10) {
+            e.y = height + 10;
+            e.x = Math.random() * width;
+          }
+          ctx.fillStyle = `${e.color}${e.alpha})`;
+          ctx.beginPath();
+          ctx.arc(e.x, e.y, e.radius, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // 3. Draw and update Dynamic Burst Particles
+        for (let i = dynamicParticles.length - 1; i >= 0; i--) {
+          const p = dynamicParticles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.04; // Gentle gravity
+          p.rotation += p.vRot;
+          p.alpha -= p.decay;
+
+          if (p.alpha <= 0) {
+            dynamicParticles.splice(i, 1);
+            continue;
+          }
+
+          if (p.type === 'heart') {
+            drawCanvasHeart(ctx, p.x, p.y, p.size, p.color, p.alpha, p.rotation);
+          } else {
+            drawSparkle(ctx, p.x, p.y, p.size, p.color, p.alpha);
+          }
+        }
+      }
+      requestAnimationFrame(renderLoop);
+
+      // Interactive Click/Tap Anywhere Creates Love Sparkles
+      window.addEventListener('click', (e) => {
+        // Skip if clicked inside interactive controls
+        if (e.target.closest('button') || e.target.closest('input') || e.target.closest('a') || e.target.closest('.modal-sheet')) {
+          return;
+        }
+        triggerHeartBurst(e.clientX, e.clientY, 8);
+      });
+
+      // Quick actions in header
+      document.getElementById('burst-trigger-nav').addEventListener('click', () => {
+        for (let i = 0; i < 4; i++) {
+          setTimeout(() => {
+            const rx = Math.random() * width * 0.8 + width * 0.1;
+            const ry = Math.random() * height * 0.5 + height * 0.2;
+            triggerHeartBurst(rx, ry, 18);
+          }, i * 200);
+        }
+        playChime(659.25); // E5
+        showToast('A sky full of love showered upon you ✨');
+      });
+
+      /* -----------------------------------------------------------
+         5. KEEPSAKE MODALS: LETTER, CONSTELLATION, POLAROID
+         ----------------------------------------------------------- */
+      // Letter Modal
+      const modalLoveLetter = document.getElementById('modal-love-letter');
+      const letterTriggerNav = document.getElementById('letter-trigger-nav');
+      const cardLoveLetter = document.getElementById('card-love-letter');
+      const closeLetterModal = document.getElementById('close-letter-modal');
+
+      function openLetter() {
+        modalLoveLetter.classList.add('is-open');
+        playChime(523.25); // C5
+      }
+      function closeLetter() {
+        modalLoveLetter.classList.remove('is-open');
+      }
+
+      letterTriggerNav.addEventListener('click', openLetter);
+      cardLoveLetter.addEventListener('click', openLetter);
+      cardLoveLetter.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') openLetter(); });
+      closeLetterModal.addEventListener('click', closeLetter);
+
+      // Constellation Modal & Interactive Canvas
+      const modalConstellation = document.getElementById('modal-constellation');
+      const cardConstellation = document.getElementById('card-constellation');
+      const closeConstellationModal = document.getElementById('close-constellation-modal');
+      const constellationCanvas = document.getElementById('constellation-canvas');
+      const cCtx = constellationCanvas.getContext('2d');
+
+      const constellationNodes = [
+        { x: 0.22, y: 0.35, label: "Eternal Devotion", pulse: 0 },
+        { x: 0.38, y: 0.22, label: "Unwavering Trust", pulse: 0 },
+        { x: 0.55, y: 0.28, label: "Sacred Sanctuary", pulse: 0 },
+        { x: 0.76, y: 0.42, label: "Infinite Tomorrow", pulse: 0 },
+        { x: 0.62, y: 0.72, label: "Endless Laughter", pulse: 0 },
+        { x: 0.35, y: 0.78, label: "Gentle Grace", pulse: 0 },
+        { x: 0.50, y: 0.52, label: "Heart to Heart", pulse: 1 }
+      ];
+
+      function resizeConstellation() {
+        const rect = constellationCanvas.parentElement.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        const w = rect.width;
+        const h = rect.height;
+        constrainCanvasSize(constellationCanvas, w, h);
+      }
+
+      function constrainCanvasSize(canv, w, h) {
+        canv.width = w;
+        canv.height = h;
+      }
+
+      function renderConstellation() {
+        const w = constellationCanvas.width;
+        const h = constellationCanvas.height;
+        if (!w || !h) return;
+
+        cCtx.clearRect(0, 0, w, h);
+
+        // Draw connecting lines
+        cCtx.beginPath();
+        cCtx.strokeStyle = 'rgba(255, 182, 193, 0.45)';
+        cCtx.lineWidth = 1.5;
+        cCtx.setLineDash([4, 6]);
+
+        for (let i = 0; i < constellationNodes.length - 1; i++) {
+          const n1 = constellationNodes[i];
+          const n2 = constellationNodes[i + 1];
+          cCtx.moveTo(n1.x * w, n1.y * h);
+          cCtx.lineTo(n2.x * w, n2.y * h);
+        }
+        // Connect last to first and center
+        cCtx.lineTo(constellationNodes[0].x * w, constellationNodes[0].y * h);
+        cCtx.moveTo(constellationNodes[6].x * w, constellationNodes[6].y * h);
+        cCtx.lineTo(constellationNodes[1].x * w, constellationNodes[1].y * h);
+        cCtx.stroke();
+        cCtx.setLineDash([]);
+
+        // Draw nodes
+        constellationNodes.forEach((node) => {
+          const nx = node.x * w;
+          const ny = node.y * h;
+
+          // Outer halo
+          cCtx.fillStyle = 'rgba(255, 77, 109, 0.35)';
+          cCtx.beginPath();
+          cCtx.arc(nx, ny, 12, 0, Math.PI * 2);
+          cCtx.fill();
+
+          // Star center
+          cCtx.fillStyle = '#fff';
+          cCtx.beginPath();
+          cCtx.arc(nx, ny, 4.5, 0, Math.PI * 2);
+          cCtx.fill();
+
+          // Text label
+          cCtx.font = '12px "Cinzel", serif';
+          cCtx.fillStyle = '#fae8d2';
+          cCtx.textAlign = 'center';
+          cCtx.fillText(node.label, nx, ny - 16);
+        });
+      }
+
+      function openConstellation() {
+        modalConstellation.classList.add('is-open');
+        setTimeout(() => {
+          resizeConstellation();
+          renderConstellation();
+        }, 80);
+      }
+      function closeConstellation() {
+        modalConstellation.classList.remove('is-open');
+      }
+
+      cardConstellation.addEventListener('click', openConstellation);
+      cardConstellation.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') openConstellation(); });
+      closeConstellationModal.addEventListener('click', closeConstellation);
+
+      constellationCanvas.addEventListener('click', (e) => {
+        const rect = constellationCanvas.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const clickY = e.clientY - rect.top;
+        const w = rect.width;
+        const h = rect.height;
+
+        let found = false;
+        constellationNodes.forEach((n) => {
+          const nx = n.x * w;
+          const ny = n.y * h;
+          const dist = Math.hypot(clickX - nx, clickY - ny);
+          if (dist < 28) {
+            found = true;
+            playChime(783.99); // G5
+            showToast(`Vow Illuminated: "${n.label}" ✨`);
+            triggerHeartBurst(e.clientX, e.clientY, 10);
+          }
+        });
+        if (!found) {
+          playChime(440);
+        }
+      });
+
+      // Polaroid Modal
+      const modalPolaroid = document.getElementById('modal-polaroid');
+      const cardPolaroid = document.getElementById('card-polaroid');
+      const closePolaroidModal = document.getElementById('close-polaroid-modal');
+
+      function openPolaroid() {
+        modalPolaroid.classList.add('is-open');
+        playChime(493.88); // B4
+      }
+      function closePolaroid() {
+        modalPolaroid.classList.remove('is-open');
+      }
+
+      cardPolaroid.addEventListener('click', openPolaroid);
+      cardPolaroid.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') openPolaroid(); });
+      closePolaroidModal.addEventListener('click', closePolaroid);
+
+      // Close modals on clicking backdrop
+      const modalLightbox = document.getElementById('modal-lightbox');
+      const closeLightboxModal = document.getElementById('close-lightbox-modal');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxTitle = document.getElementById('lightbox-title');
+      const lightboxDesc = document.getElementById('lightbox-desc');
+      const lightboxCounter = document.getElementById('lightbox-counter');
+      const lightboxPrevBtn = document.getElementById('lightbox-prev-btn');
+      const lightboxNextBtn = document.getElementById('lightbox-next-btn');
+
+      [modalLoveLetter, modalConstellation, modalPolaroid, modalLightbox].forEach((modal) => {
+        if (!modal) return;
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.remove('is-open');
+          }
+        });
+      });
+
+      /* -----------------------------------------------------------
+         6. MEMORY PHOTO GALLERY, LIGHTBOX & LOCAL PHOTO STORAGE
+         ----------------------------------------------------------- */
+      const memoryItems = document.querySelectorAll('.memory-item');
+      let currentMemoryIndex = 0;
+
+      const memoriesData = [
+        {
+          src: "/memories/memory_1.jpg",
+          fallback: "https://i.ibb.co/99MCMRsr/Whats-App-Image-2026-10-02-at-10-43-41-PM.jpg",
+          title: "Standing Together in Love",
+          desc: "Dipto and Popi looking radiant together, holding roses of eternal love."
+        },
+        {
+          src: "/memories/memory_2.jpg",
+          fallback: "https://i.ibb.co/nMkSZJ3b/Whats-App-Image-2026-06-27-at-5-42-01-PM-1.jpg",
+          title: "Roses Upon My Heart",
+          desc: "Popi's mehndi-adorned hand resting upon Dipto's chest, yellow and red roses blooming between our fingers."
+        },
+        {
+          src: "/memories/memory_3.jpg",
+          fallback: "https://i.ibb.co/HLm7r0F7/Whats-App-Image-2026-06-27-at-5-42-01-PM.jpg",
+          title: "Resting on My Shoulder, Bou Jan",
+          desc: "When you lean your head on my shoulder in your royal blue saree, the entire world turns quietly serene."
+        },
+        {
+          src: "/memories/memory_4.jpg",
+          fallback: "https://i.ibb.co/Kj434wPN/Whats-App-Image-2026-06-27-at-5-42-02-PM-1.jpg",
+          title: "Sunset Forehead Kiss",
+          desc: "A gentle kiss upon your forehead by the river at dusk, where two souls promise each other forever."
+        },
+        {
+          src: "/memories/memory_5.jpg",
+          fallback: "https://i.ibb.co/Y7DQdRN5/Whats-App-Image-2026-06-27-at-5-42-02-PM.jpg",
+          title: "Crimson Love · My Koliza",
+          desc: "Popi glowing in scarlet red, looking deep into Dipto's eyes surrounded by nature's green canopy."
+        },
+        {
+          src: "/memories/memory_6.jpg",
+          fallback: "https://i.ibb.co/twRLt9vg/Whats-App-Image-2026-06-27-at-5-42-03-PM.jpg",
+          title: "Inside Our Heart, Sona",
+          desc: "Standing together inside the giant heart sculpture in the park, hand in hand forever."
+        },
+        {
+          src: "/memories/memory_7.jpg",
+          fallback: "https://i.ibb.co/Q7LQ2wb6/Whats-App-Image-2026-07-22-at-11-50-41-PM.jpg",
+          title: "Sweet Embrace · Popi & Dipto",
+          desc: "Cherishing every quiet second together, laughing under the starlit sky."
+        },
+        {
+          src: "/memories/memory_8.jpg",
+          fallback: "https://i.ibb.co/SXRYH0Q6/Whats-App-Image-2026-07-12-at-2-17-17-AM.jpg",
+          title: "Under the City Lights · Real Magic",
+          desc: "The real photograph of that unforgettable rooftop balcony moment, our eyes locked in boundless love."
+        },
+        {
+          src: "/memories/memory_9.jpg",
+          fallback: "https://i.ibb.co/y9G1Thz/Whats-App-Image-2026-07-16-at-8-56-09-PM.jpg",
+          title: "Shy Smile Behind the Blooms, My Jan",
+          desc: "Holding roses softly to your lips, laughing in pure happiness in our peaceful garden."
+        },
+        {
+          src: "/memories/memory_10.png",
+          fallback: "https://i.ibb.co/ycdxqVDy/Gemini-Generated-Image-p1e3rpp1e3rpp1e3-1.png",
+          title: "Our Studio Ghibli Fairytale",
+          desc: "A magical watercolor memory of Dipto & Popi celebrating eternal devotion."
+        }
+      ];
+
+      // IndexedDB for storing Dipto & Popi's photos permanently in high quality
+      const DB_NAME = 'DiptoPopiLoveAlbum';
+      const STORE_NAME = 'memories';
+      let db = null;
+
+      function initDB(callback) {
+        const req = indexedDB.open(DB_NAME, 1);
+        req.onupgradeneeded = (e) => {
+          const dbInstance = e.target.result;
+          if (!dbInstance.objectStoreNames.contains(STORE_NAME)) {
+            dbInstance.createObjectStore(STORE_NAME, { keyPath: 'id' });
+          }
+        };
+        req.onsuccess = (e) => {
+          db = e.target.result;
+          if (callback) callback();
+        };
+        req.onerror = () => {
+          console.warn('IndexedDB not supported or permission denied.');
+        };
+      }
+
+      function savePhotoToDB(id, dataUrl) {
+        if (!db) return;
+        const tx = db.transaction([STORE_NAME], 'readwrite');
+        const store = tx.objectStore(STORE_NAME);
+        store.put({ id: id, dataUrl: dataUrl });
+      }
+
+      function loadSavedPhotosFromDB() {
+        if (!db) return;
+        const tx = db.transaction([STORE_NAME], 'readonly');
+        const store = tx.objectStore(STORE_NAME);
+        const req = store.getAll();
+        req.onsuccess = () => {
+          const items = req.result || [];
+          items.forEach((item) => {
+            applyPhotoToCard(item.id, item.dataUrl);
+          });
+        };
+      }
+
+      function applyPhotoToCard(index, dataUrl) {
+        if (index < 0 || index >= memoriesData.length) return;
+        memoriesData[index].src = dataUrl;
+        const card = document.querySelector(`.memory-item[data-index="${index}"]`);
+        if (card) {
+          const img = card.querySelector('.polaroid-img');
+          const placeholder = card.querySelector('.polaroid-placeholder');
+          if (img) {
+            img.src = dataUrl;
+            img.style.display = 'block';
+          }
+          if (placeholder) {
+            placeholder.style.display = 'none';
+          }
+        }
+      }
+
+      initDB(loadSavedPhotosFromDB);
+
+      // Batch photo selector
+      const btnSelectPhotos = document.getElementById('btn-select-photos');
+      const btnResetPhotos = document.getElementById('btn-reset-photos');
+      const batchPhotoInput = document.getElementById('batch-photo-input');
+      const singlePhotoInput = document.getElementById('single-photo-input');
+      const dropzone = document.getElementById('memories-dropzone');
+      let targetSingleSlot = 0;
+
+      if (btnSelectPhotos && batchPhotoInput) {
+        btnSelectPhotos.addEventListener('click', () => {
+          batchPhotoInput.click();
+        });
+      }
+
+      if (batchPhotoInput) {
+        batchPhotoInput.addEventListener('change', (e) => {
+          handleSelectedFiles(Array.from(e.target.files));
+        });
+      }
+
+      // Drag and drop onto memory section
+      if (dropzone) {
+        ['dragenter', 'dragover'].forEach(eventName => {
+          dropzone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropzone.classList.add('dragover');
+          }, false);
+        });
+        ['dragleave', 'drop'].forEach(eventName => {
+          dropzone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropzone.classList.remove('dragover');
+          }, false);
+        });
+        dropzone.addEventListener('drop', (e) => {
+          const dt = e.dataTransfer;
+          const files = dt ? Array.from(dt.files) : [];
+          if (files.length > 0) {
+            handleSelectedFiles(files);
+          }
+        });
+      }
+
+      function handleSelectedFiles(files) {
+        const imageFiles = files.filter(f => f.type.startsWith('image/'));
+        if (imageFiles.length === 0) return;
+
+        let processed = 0;
+        imageFiles.forEach((file, i) => {
+          if (i >= 10) return;
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const dataUrl = e.target.result;
+            applyPhotoToCard(i, dataUrl);
+            savePhotoToDB(i, dataUrl);
+            processed++;
+            if (processed === Math.min(imageFiles.length, 10)) {
+              showToast(`${processed} Photos Loaded & Saved in Album! ❤️`);
+              triggerHeartBurst(window.innerWidth / 2, window.innerHeight * 0.4, 25);
+            }
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      // Single photo replace button
+      document.querySelectorAll('.polaroid-change-badge').forEach((badge) => {
+        badge.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const card = badge.closest('.memory-item');
+          if (card) {
+            targetSingleSlot = parseInt(card.getAttribute('data-index'), 10);
+            if (singlePhotoInput) singlePhotoInput.click();
+          }
+        });
+      });
+
+      if (singlePhotoInput) {
+        singlePhotoInput.addEventListener('change', (e) => {
+          const file = e.target.files[0];
+          if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+              const dataUrl = ev.target.result;
+              applyPhotoToCard(targetSingleSlot, dataUrl);
+              savePhotoToDB(targetSingleSlot, dataUrl);
+              showToast('Memory photo updated ❤️');
+              triggerHeartBurst(window.innerWidth / 2, window.innerHeight * 0.5, 15);
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+      }
+
+      // Reset photos
+      if (btnResetPhotos) {
+        btnResetPhotos.addEventListener('click', () => {
+          if (confirm('Clear saved photos and reset album?')) {
+            if (db) {
+              const tx = db.transaction([STORE_NAME], 'readwrite');
+              tx.objectStore(STORE_NAME).clear();
+            }
+            location.reload();
+          }
+        });
+      }
+
+      function openLightbox(index) {
+        currentMemoryIndex = (index + memoriesData.length) % memoriesData.length;
+        const data = memoriesData[currentMemoryIndex];
+        lightboxImg.onerror = function() {
+          if (data.fallback && lightboxImg.src !== data.fallback) {
+            lightboxImg.src = data.fallback;
+          }
+        };
+        lightboxImg.src = data.src;
+        lightboxTitle.textContent = data.title;
+        lightboxDesc.textContent = data.desc;
+        lightboxCounter.textContent = `${(currentMemoryIndex + 1).toString().padStart(2, '0')} / ${memoriesData.length.toString().padStart(2, '0')}`;
+        modalLightbox.classList.add('is-open');
+        playChime(659.25); // E5
+      }
+
+      function closeLightbox() {
+        modalLightbox.classList.remove('is-open');
+      }
+
+      memoryItems.forEach((item) => {
+        const idx = parseInt(item.getAttribute('data-index'), 10);
+        item.addEventListener('click', () => openLightbox(idx));
+        item.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openLightbox(idx);
+          }
+        });
+      });
+
+      if (closeLightboxModal) closeLightboxModal.addEventListener('click', closeLightbox);
+      if (lightboxPrevBtn) lightboxPrevBtn.addEventListener('click', () => openLightbox(currentMemoryIndex - 1));
+      if (lightboxNextBtn) lightboxNextBtn.addEventListener('click', () => openLightbox(currentMemoryIndex + 1));
+
+      /* -----------------------------------------------------------
+         6B. PET NAMES & ENDEARMENT CLICKS
+         ----------------------------------------------------------- */
+      const petNameButtons = document.querySelectorAll('.pet-name-item');
+      const petNameMessages = {
+        'Sona': "Dipto: 'Popi, you are my most precious Sona in the universe!' ✨",
+        'Jan': "Dipto: 'Jan, every breath I take belongs to you!' ❤️",
+        'Pakhi': "Dipto: 'My sweet Pakhi, you bring boundless joy to my life!' 🕊️",
+        'Koliza': "Dipto: 'Tumi amar Koliza... you beat deep inside my chest!' 🌸",
+        'Bou Jan': "Dipto: 'Amar sundor Bou Jan, I will cherish you for all of eternity!' 💍"
+      };
+
+      petNameButtons.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          const name = btn.getAttribute('data-name');
+          const msg = petNameMessages[name] || `I love you, my ${name}! ❤️`;
+          const rect = btn.getBoundingClientRect();
+          triggerHeartBurst(rect.left + rect.width / 2, rect.top, 18);
+          playChime(698.46); // F5
+          showToast(msg);
+        });
+      });
+
+      /* -----------------------------------------------------------
+         7. PERSONALIZED ANNIVERSARY & TIME TOGETHER COUNTER
+         ----------------------------------------------------------- */
+      const timeDaysEl = document.getElementById('time-days');
+      const timeHoursEl = document.getElementById('time-hours');
+      const timeMinutesEl = document.getElementById('time-minutes');
+      const timeSecondsEl = document.getElementById('time-seconds');
+      const namesDisplay = document.getElementById('counter-names-display');
+      const editAnniversaryBtn = document.getElementById('edit-anniversary-btn');
+
+      // Exact journey start date: 7th January 2024 at 12:32 AM
+      let storedStartDate = localStorage.getItem('ily_start_date') || '2024-01-07T00:32:00';
+      let storedNames = localStorage.getItem('ily_names') || 'Dipto & Popi, Forever';
+
+      namesDisplay.textContent = storedNames;
+
+      function updateLiveTimer() {
+        const start = new Date(storedStartDate).getTime();
+        const now = Date.now();
+        const diff = Math.max(0, now - start);
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        timeDaysEl.textContent = days.toLocaleString();
+        timeHoursEl.textContent = hours.toString().padStart(2, '0');
+        timeMinutesEl.textContent = minutes.toString().padStart(2, '0');
+        timeSecondsEl.textContent = seconds.toString().padStart(2, '0');
+      }
+      setInterval(updateLiveTimer, 1000);
+      updateLiveTimer();
+
+      editAnniversaryBtn.addEventListener('click', () => {
+        const newNames = prompt('Enter couple names or dedication:', storedNames);
+        if (newNames && newNames.trim()) {
+          storedNames = newNames.trim();
+          localStorage.setItem('ily_names', storedNames);
+          namesDisplay.textContent = storedNames;
+        }
+
+        const newDate = prompt('Enter starting date & time (YYYY-MM-DDTHH:MM:SS):', storedStartDate);
+        if (newDate && !isNaN(new Date(newDate).getTime())) {
+          storedStartDate = newDate;
+          localStorage.setItem('ily_start_date', storedStartDate);
+          updateLiveTimer();
+          showToast('Milestone date updated ❤️');
+        }
+      });
+
+      /* -----------------------------------------------------------
+         8. KEYBOARD SHORTCUTS & ACCESSIBILITY
+         ----------------------------------------------------------- */
+      window.addEventListener('keydown', (e) => {
+        // Spacebar: Play/Pause music (unless typing in prompt/input)
+        if (e.code === 'Space' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+          e.preventDefault();
+          togglePlayPause();
+        }
+        // 'H' or 'L': Shower hearts
+        if (e.key === 'h' || e.key === 'H' || e.key === 'l' || e.key === 'L') {
+          if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+            const rx = Math.random() * width * 0.7 + width * 0.15;
+            const ry = Math.random() * height * 0.6 + height * 0.2;
+            triggerHeartBurst(rx, ry, 20);
+            showToast('Heart shower released for Popi ❤️');
+          }
+        }
+        // 'M': Mute/Unmute
+        if (e.key === 'm' || e.key === 'M') {
+          if (e.target.tagName !== 'INPUT') {
+            volMuteBtn.click();
+          }
+        }
+        // 'N': Next Quote
+        if (e.key === 'n' || e.key === 'N') {
+          if (e.target.tagName !== 'INPUT') {
+            displayQuote(currentQuoteIndex + 1);
+          }
+        }
+        // Arrow keys in Lightbox
+        if (modalLightbox && modalLightbox.classList.contains('is-open')) {
+          if (e.key === 'ArrowLeft') openLightbox(currentMemoryIndex - 1);
+          if (e.key === 'ArrowRight') openLightbox(currentMemoryIndex + 1);
+        }
+        // Escape: Close any open modal
+        if (e.key === 'Escape') {
+          [modalLoveLetter, modalConstellation, modalPolaroid, modalLightbox].forEach(m => {
+            if (m) m.classList.remove('is-open');
+          });
+        }
+      });
+
+      /* -----------------------------------------------------------
+         9. TOAST NOTIFICATION HELPER
+         ----------------------------------------------------------- */
+      let toastTimeout = null;
+      const toastEl = document.getElementById('toast');
+      function showToast(message) {
+        if (toastTimeout) clearTimeout(toastTimeout);
+        toastEl.textContent = message;
+        toastEl.classList.add('is-active');
+        toastTimeout = setTimeout(() => {
+          toastEl.classList.remove('is-active');
+        }, 3200);
+      }
+
+    })();
+  </script>
+</body>
+</html>

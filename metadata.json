@@ -1,0 +1,6 @@
+{
+  "name": "I Love You Forever",
+  "description": "A nostalgic, cinematic romantic digital experience celebrating eternal love with dynamic poetry, interactive constellations, love letters, and music.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
